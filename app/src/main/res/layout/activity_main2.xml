@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--// 전체적인 디자인 컬러나 아이콘은 임의로 설정한 것임-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#FA5858"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/back"/> // 뒤로가기 버튼
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="글쓰기"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:gravity="center"/>//BDBDBD 글쓰기 타이틀
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="15dp"
+            android:text="완료"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:background="@drawable/submit"/> // 완료 버튼
+
+    </LinearLayout> // 상단 메뉴바
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+            <EditText
+                android:id="@+id/write_content"
+                android:theme="@style/EditTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:hint="글을 입력해주세요."
+                android:textColorHint="@color/grey"
+                android:textSize="20dp"
+                android:background="@android:color/transparent"
+                android:singleLine="false"/>
+
+    </ScrollView> //글 작성 공간
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="#F8E0E0"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+            android:id="@+id/image_upload_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/gallery"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"/> // 사진 업로드 버튼
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(사진을 첨부해주세요.)"
+                android:textColor="@color/grey"
+                android:textSize="20dp"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout> // 사진첨부 버튼 + 설명글
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"/> // 갤러리에서 선택한 사진 미리보기 공간(추후 name 수정)
+
+    </LinearLayout> // 사진 공간(추후 name 수정)
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Community">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8A9EE"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="커뮤니티"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/writereviewbutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/plus"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <!--        &lt;!&ndash;- 하단 바 부분, 위치 아래에 고정시키는 방법은? &ndash;&gt;-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:weight="1"-->
+        <!--            android:background="#F8A9EE"-->
+        <!--            android:orientation="horizontal"-->
+        <!--            android:padding="5dp"-->
+        <!--            android:layout_below="@+id/recycler_view"-->
+        <!--            >-->
+
+        <!--            하단 바 홈 버튼-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/bottom_home"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="44dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="홈" />-->
+
+        <!--            &lt;!&ndash; 하단 바 커뮤니티 버튼&ndash;&gt;-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/bottom_communitybutton"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:layout_height="44dp"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="커뮤니티" />-->
+
+        <!--        </LinearLayout>-->
+
+    </RelativeLayout>
+
+</LinearLayout>
